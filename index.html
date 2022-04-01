@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="style.css">
+
+<body>
+    <h1>Given array of students marks [23, 45, 67, 78, 91], add 10 in all the elements of an array by using map and
+        forEach function</h1>
+    <pre>
+        var marks=[23,45,67,78,91];
+        const data=marks.map((e)=>e+10)
+        console.log(data)</pre>
+
+    <h1>Given array of student marks [23, 45, 67, 78, 91], find out how many students have got marks less than 65 and
+        return the array.</h1>
+
+    <pre>
+        var marks1=[23,45,67,78,91];
+        const data1=marks1.filter((e)=>e<65)
+        console.log(data1)
+    </pre>
+    <h1>Return the sum of all the marks of students present in given array [23, 45, 67, 78, 91]
+    </h1>
+    <pre>
+        var marks3=[23,45,67,78,91];
+        const data3=marks3.reduce((x,y)=>x=x+y,0)
+        console.log('sum=' +data3)
+    </pre>
+
+    <h1>Replace "Peter" with "John" in whole string : Given String : "Peter is a good friend of Mike. Peter is working
+        in a IT company in Australia".</h1>
+    <pre>
+
+    const str1='Peter is good friend of Mike.Peter is working in a IT company in Australia';
+    console.log('Before replacing--'+str1)
+    const res1=str1.replaceAll('Peter','John')
+    console.log('After replacing---'+res1)
+    </pre>
+
+    <h1>
+        Reverse a given string "Hello this is me" , result should be "me is this Hello".
+    </h1>
+    <pre>
+
+    var str='Hello this is me';
+    const res=str.split(' ').reverse().join(' ');
+    console.log(res)
+    </pre>
+    <h1>
+        Create an object contain name age salary as the properties, retrieve key and values in separate arrays
+    </h1>
+    <pre>
+
+        let employee={
+            name:'xyz',
+            age:33,
+            salary:2400
+        }
+        
+        const emp=Object.keys(employee)
+        console.log('keys : '+emp)
+        
+        
+        const emp1=Object.values(employee)
+        console.log('values : '+emp1)
+    </pre>
+
+
+    <h1>Explain call apply bind</h1>
+    <p>call apply bind use to borrowing a function</p>
+    <p>call take argument seperately</p>
+    <p>apply take argument in array formate</p>
+    <p>bind return function</p>
+    <pre>
+        let person={
+            name:'abc',
+            last:'xyz'
+        }
+        
+        let fullname=function(city){
+            console.log('My full name is '+this.name + ' '+this.last+'i lived in '+ ' '+city)
+        }
+        
+        fullname.call(person,'pune')
+        
+        fullname.apply(person,['pune'])
+        
+        
+        const per=fullname.bind(person,'pune')
+        console.log(per)
+        per()
+       
+    </pre>
+
+    <h1>Prototype chaining</h1>
+    <p>prototype chaining meanse prototype inside prototype inside prototype untill it get null.</p>
+    <script src="./script.js"></script>
+</body>
+
+</html>
